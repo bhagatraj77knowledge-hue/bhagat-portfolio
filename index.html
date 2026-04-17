@@ -1,114 +1,167 @@
-make portfolio https://www.figma.com/community/file/1182197835889504018/portfolio-design
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bhagat Raj | Cloud Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
-    header {
-      text-align: center;
-      padding: 50px;
-      background: #1e293b;
-    }
-    h1 { margin: 0; }
-    section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-    }
-    a { color: #38bdf8; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhagat Raj | Cloud Engineer</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0b0f19;
+  color: #e5e7eb;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #0b0f19;
+  position: sticky;
+  top: 0;
+}
+nav a {
+  color: #9ca3af;
+  margin-left: 20px;
+  text-decoration: none;
+}
+nav a:hover { color: white; }
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+}
+.hero h1 {
+  font-size: 48px;
+}
+.hero span {
+  color: #38bdf8;
+}
+.hero p {
+  color: #9ca3af;
+  max-width: 500px;
+}
+.btn {
+  background: #38bdf8;
+  padding: 10px 20px;
+  color: black;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* SECTION */
+section {
+  padding: 60px;
+}
+h2 {
+  margin-bottom: 30px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Bhagat Raj</h1>
-  <p>Cloud & Infrastructure Engineer @ Air Canada</p>
-  <p>Azure | Terraform | DevOps | Kubernetes | SRE</p>
-</header>
+<nav>
+  <h3>Bhagat Raj</h3>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-<section>
+<div class="hero">
+  <div>
+    <h1>Hi, I'm <span>Bhagat Raj</span></h1>
+    <p>Cloud & Infrastructure Engineer specializing in Azure, Terraform, Kubernetes, and DevOps automation.</p>
+    <a class="btn" href="#projects">View Work</a>
+  </div>
+</div>
+
+<section id="about">
   <h2>About Me</h2>
   <p>
-    Senior Cloud & Infrastructure Engineer with experience in Azure, Terraform,
-    Kubernetes, and CI/CD pipelines. Passionate about building scalable,
-    automated cloud environments and optimizing infrastructure performance.
+    Senior Cloud Engineer at Air Canada with strong experience in Azure infrastructure,
+    Terraform automation, Kubernetes, and CI/CD pipelines. Passionate about building scalable systems.
   </p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Azure Terraform Deployment</h3>
+      <p>Automated cloud infrastructure using reusable Terraform modules.</p>
+    </div>
+
+    <div class="card">
+      <h3>CI/CD Pipelines</h3>
+      <p>Implemented GitHub Actions pipelines for automated deployments.</p>
+    </div>
+
+    <div class="card">
+      <h3>Azure FinOps</h3>
+      <p>Optimized cloud costs with monitoring and automation strategies.</p>
+    </div>
+
+  </div>
 </section>
 
 <section>
   <h2>Skills</h2>
-  <div class="card">
-    Azure, Terraform, Linux, Networking, GitHub Actions, PowerShell, SQL, Kubernetes
+  <div class="grid">
+    <div class="card">Azure</div>
+    <div class="card">Terraform</div>
+    <div class="card">Kubernetes</div>
+    <div class="card">GitHub Actions</div>
+    <div class="card">Linux</div>
+    <div class="card">PowerShell</div>
   </div>
 </section>
 
-<section>
-  <h2>Projects</h2>
-
-  <div class="card">
-    <h3>Azure Infrastructure with Terraform</h3>
-    <p>Automated deployment of scalable Azure infrastructure using Terraform modules.</p>
-  </div>
-
-  <div class="card">
-    <h3>CI/CD Pipeline with GitHub Actions</h3>
-    <p>Built automated pipelines for application deployment and infrastructure provisioning.</p>
-  </div>
-
-  <div class="card">
-    <h3>Azure FinOps Optimization</h3>
-    <p>Implemented cost monitoring and optimization strategies for cloud environments.</p>
-  </div>
-
-</section>
-
-<section>
-  <h2>Experience</h2>
-
-  <div class="card">
-    <h3>Air Canada</h3>
-    <p>Senior Cloud & Infrastructure Engineer</p>
-  </div>
-
-  <div class="card">
-    <h3>Staples</h3>
-    <p>Azure DevOps Engineer</p>
-  </div>
-
-  <div class="card">
-    <h3>Thomson Reuters</h3>
-    <p>DevOps Engineer</p>
-  </div>
-
-</section>
-
-<section>
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: bhagatraj192@gmail.com</p>
   <p>
     LinkedIn:
     <a href="https://www.linkedin.com/in/bhagatraj-devopsengineer" target="_blank">
-      View Profile
+      Connect with me
     </a>
   </p>
 </section>
+
+<footer>
+  © 2026 Bhagat Raj
+</footer>
 
 </body>
 </html>
